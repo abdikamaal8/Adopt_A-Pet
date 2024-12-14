@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt - Paw Haven</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Adopt a Pet</h1>
+        <nav class="navcontainer">
+            <a href="../index.html">Home</a>
+            <a href="adopt.html">Adopt</a>
+            <a href="pet-care.html">Pet Care Tips</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="adoption-list">
+            <h2>Available Pets</h2>
+            <div class="pet-gallery">
+                <figure>
+                    <img src="../images/catpic6.jpeg" alt="Fluffy the cat">
+                    <figcaption>
+                        <h3>Fluffy</h3>
+                        <p>Age: 2 years | Gender: Female</p>
+                        <p>Backstory: Fluffy is a playful and affectionate cat who loves chasing string toys and cuddling in cozy spots. She’s looking for a warm home to call her own.</p>
+                        <a href="info.html" class="adopt-button">Adopt Me</a>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/dogpic2.jpeg" alt="Odie the dog">
+                    <figcaption>
+                        <h3>Odie</h3>
+                        <p>Age: 4 years | Gender: Male</p>
+                        <p>Backstory: Odie is an energetic dog who enjoys long walks and playing fetch. He’s great with kids and ready to bring joy to your home!</p>
+                        <a href="info.html" class="adopt-button">Adopt Me</a>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="adoption-form">
+            <h2>Adoption Form</h2>
+            <form action="/submit-adoption" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="pet">Pet You Want to Adopt:</label>
+                <input type="text" id="pet" name="pet" required>
+
+                <a href="info.html" class="button-link">Submit</a>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Paw Haven</p>
+        <p id="currentDate"></p>
+    <script>
+        document.getElementById("currentDate").textContent = new Date().toDateString();
+    </script>
+
+    </footer>
+</body>
+</html>

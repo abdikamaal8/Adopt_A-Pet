@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paw Haven - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Paw Haven</h1>
+    <nav class="navcontainer">
+        <a href="index.html">Home</a>
+        <a href="pages/adopt.html">Adopt</a>
+        <a href="pages/pet-care.html">Pet Care Tips</a>
+        <a href="pages/contact.html">Contact Us</a>
+    </nav>
+</header>
+
+
+    <main>
+        <section class="hero-banner">
+            <h2>Welcome to Paw Haven</h2>
+            <p>At Paw Haven, we are dedicated to fostering a loving connection between people and pets. Our mission is to create a warm, welcoming space where individuals can enjoy coffee, cuddles, and companionship while discovering the joy of pet adoption. We strive to educate our community on responsible pet care and provide a platform for homeless animals to find their forever homes. Through kindness, compassion, and collaboration, we aim to transform lives—both human and animal—one paw at a time.</p>
+        </section>
+
+        <section class="featured-pets">
+            <h3>Meet Our Featured Pets</h3>
+            <div class="pet-gallery">
+                <figure>
+                    <img src="images/catpic6.jpeg" alt="Fluffy the cat">
+                    <figcaption>
+                        <strong>Fluffy</strong><br>
+                        Age: 2 years<br>
+                        Favorite Food: Salmon Treats
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/dogpic1.jpeg" alt="Buddy the dog">
+                    <figcaption>
+                        <strong>Buddy</strong><br>
+                        Age: 4 years<br>
+                        Favorite Food: Beef Jerky
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/catpic4.jpeg" alt="Whiskers the cat">
+                    <figcaption>
+                        <strong>Whiskers</strong><br>
+                        Age: 3 years<br>
+                        Favorite Food: Tuna
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/dogpic2.jpeg" alt="Odie the dog">
+                    <figcaption>
+                        <strong>Odie</strong><br>
+                        Age: 5 years<br>
+                        Favorite Food: Chicken Nuggets
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Paw Haven | Contact us at <a href="mailto:info@pawhaven.com">info@pawhaven.com</a> </p>
+        <p id="currentDate"></p>
+    <script>
+        document.getElementById("currentDate").textContent = new Date().toDateString();
+    </script>
+
+    </footer>
+</body>
+</html>
