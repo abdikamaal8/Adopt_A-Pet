@@ -8,14 +8,14 @@
 </head>
 <body>
     <header>
-        <h1>Pet Care Tips</h1>
-        <nav class="navcontainer">
-            <a href="../index.html">Home</a>
-            <a href="adopt.html">Adopt</a>
-            <a href="pet-care.html">Pet Care Tips</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-    </header>
+    <h1>Pet Care Tips</h1>
+    <nav class="navcontainer">
+        <a href="../index.html" onclick="playNavClickSound()">Home</a>
+        <a href="adopt.html" onclick="playNavClickSound()">Adopt</a>
+        <a href="pet-care.html" onclick="playNavClickSound()">Pet Care Tips</a>
+        <a href="contact.html" onclick="playNavClickSound()">Contact Us</a>
+    </nav>
+</header>
 
     <div class="banner">
         <img src="../images/Carepic.jpeg" alt="Pet Care Banner" style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
@@ -44,6 +44,23 @@
             </ul>
         </section>
 
+        <section class="videos">
+            <h2>Pet Care Videos</h2>
+            <div class="video-gallery">
+                <!-- Video by Pixabay from Pexels: https://www.pexels.com/video/cat-eating-854840/ -->
+                <video controls>
+                    <source src="../media/cat.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <!-- Video by KoolShooters from Pexels: https://www.pexels.com/video/a-person-giving-food-to-a-pomeranian-7683653/ -->
+                <video controls>
+                    <source src="../media/dog.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
         <section class="testimonials">
             <h2>Happy Pet Owners</h2>
             <blockquote>
@@ -55,12 +72,29 @@
         </section>
     </main>
 
+<!-- Ensures only one video plays at a time by pausing all other videos when a new one starts playing-->
+<script>
+    const videos = document.querySelectorAll('video');
+
+    videos.forEach((video) => {
+        video.addEventListener('play', () => {
+            videos.forEach((otherVideo) => {
+                if (otherVideo !== video) {
+                    otherVideo.pause();
+                }
+            });
+        });
+    });
+</script>
+
+
     <footer>
         <p>&copy; 2024 Paw Haven | Your Partner in Pet Care</p>
         <p id="currentDate"></p>
-    <script>
-        document.getElementById("currentDate").textContent = new Date().toDateString();
-    </script>
+        <script>
+            document.getElementById("currentDate").textContent = new Date().toDateString();
+        </script>
     </footer>
+
 </body>
 </html>
